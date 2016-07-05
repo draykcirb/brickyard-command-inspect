@@ -3,7 +3,7 @@
  */
 'use strict'
 
-const butil = require('../../util')
+const butil = require('brickyard/lib/util')
 
 module.exports = {
 	register,
