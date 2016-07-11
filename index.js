@@ -16,7 +16,7 @@ module.exports = {
  * @param {function(Object)} optionsCallback
  */
 function register(cmd, optionsCallback) {
-	cmd
+	return cmd
 		.description('output the runtime object of the plugin')
 		.arguments('<program...>')
 		.action(function (program, options) {
