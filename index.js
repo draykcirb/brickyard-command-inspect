@@ -6,8 +6,8 @@
 const butil = require('brickyard3/lib/util')
 
 module.exports = {
-	register,
-	run
+    register,
+    run
 }
 
 /**
@@ -16,17 +16,17 @@ module.exports = {
  * @param {function(Object)} optionsCallback
  */
 function register(cmd, optionsCallback) {
-	return cmd
-		.description('output the runtime object of the plugin')
-		.arguments('<program...>')
-		.action(function (program, options) {
-			optionsCallback({ program: program })
-		})
+    return cmd
+        .description('output the runtime object of the plugin')
+        .arguments('<program...>')
+        .action(function (program, options) {
+            optionsCallback({ program: program })
+        })
 }
 
 function run(runtime) {
-	runtime.config = butil.sortObjectKeys(runtime.config)
-	console.log(JSON.stringify(runtime, null, 4))
+    runtime.config = butil.sortObjectKeys(runtime.config)
+    console.log(JSON.stringify(runtime, null, 4))
 }
 
 
